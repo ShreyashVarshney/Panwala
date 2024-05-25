@@ -7,7 +7,6 @@ const Search = () => {
   const [pickup, setPickup] = useState("");
   const [dropoff, setDropoff] = useState("");
 
-
   return (
     <Wrapper>
       <ButtonContainer>
@@ -34,12 +33,8 @@ const Search = () => {
             onChange={(e) => setDropoff(e.target.value)}
           ></Input>
         </InputBoxes>
-        <PlusIcon src="https://cdn-icons-png.flaticon.com/256/9312/9312231.png" />
       </InputContainer>
-      <SavedPlaces>
-        <StarIcon src="https://cdn-icons-png.flaticon.com/256/616/616489.png" />
-        Saved Places
-      </SavedPlaces>
+
       <Link
         href={{
           pathname: "/confirm",
@@ -66,11 +61,11 @@ bg-gray-200 h-screen
 `;
 
 const ButtonContainer = tw.div`
-bg-white px-4
+bg-white px-4 p-2 pl-6
 `;
 
 const BackButton = tw.img`
-h-12 cursor-pointer
+h-12 cursor-pointer h-5 w-5
 `;
 
 const FromToIcons = tw.div`
