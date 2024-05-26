@@ -225,7 +225,9 @@ const RideSelector = ({
 }) => {
   const [rideDuration, setRideDuration] = useState(0);
   const [selectedRides, setSelectedRides] = useState({});
-
+   useEffect(()=>{
+    localStorage.setItem("carlist",carList)
+   },[])
   // Get ride duration
   useEffect(() => {
     fetch(
@@ -265,10 +267,10 @@ const RideSelector = ({
     for (const [service, count] of Object.entries(rides)) {
       const car = carList.find((car) => car.service === service);
       if (car) {
-        total += count * (rideDuration * car.multiplier);
+        total += count * (rideDuration * car.multiplier*10);
       }
     }
-    setTotalAmount(total.toFixed(2));
+    setTotalAmount(Math.floor(total.toFixed(2)));
   };
 
   return (

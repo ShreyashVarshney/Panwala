@@ -106,3 +106,4 @@ flex items-center bg-white px-4 py-2
 const StarIcon = tw.img`
 bg-gray-400 w-10 h-10 p-2 rounded-full mr-2
 `;
+

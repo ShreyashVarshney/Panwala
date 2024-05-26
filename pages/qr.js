@@ -125,7 +125,7 @@ const QRPage = () => {
             alt="QR Code"
           />
         </QRContainer>
-        <BackLink href="/payment">Back to Payment</BackLink>
+        <BackLink href="/">Back to Panwala</BackLink>
       </Content>
     </Wrapper>
   );
